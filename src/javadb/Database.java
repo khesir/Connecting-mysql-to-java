@@ -27,17 +27,13 @@ public class Database {
             System.err.println(e);
         }
     } 
-    public void insert(String query)throws Exception{
+    // Query such as that updates the database
+    public void update(String query)throws Exception{
         statement.executeUpdate(query);
     }
     
-    public ResultSet select(String query)throws Exception{
+    // Query such as does not affect the state of the database
+    public ResultSet query(String query)throws Exception{
         return statement.executeQuery(query);
-    }
-    public void delete(String query) throws Exception{
-        statement.executeUpdate(query);
-    }
-    public void update(String query) throws Exception{
-        statement.executeUpdate(query);
     }
 }
