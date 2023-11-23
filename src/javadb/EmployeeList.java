@@ -219,7 +219,7 @@ public class EmployeeList extends javax.swing.JFrame {
 
     private void SelectAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectAllActionPerformed
         DefaultTableModel tbmodel = (DefaultTableModel) Table1.getModel();
-        
+        Table1.setModel(tbmodel);
         try{
             ResultSet st = b.select("Select * from employees");
             while(st.next()){
